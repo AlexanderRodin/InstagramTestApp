@@ -1,11 +1,12 @@
-package com.example.mytestins
+package com.example.mytestins.activityes
 
 import android.os.Bundle
 import android.util.Log
+import com.example.mytestins.R
 
 
-class LikesActivity : BaseActivity(3) {
-    private val TAG = "LikesActivity"
+class SearchActivity : BaseActivity(1) {
+    private val TAG = "SearchActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

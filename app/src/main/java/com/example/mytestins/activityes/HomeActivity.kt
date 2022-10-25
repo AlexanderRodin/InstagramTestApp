@@ -1,8 +1,10 @@
-package com.example.mytestins
+package com.example.mytestins.activityes
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import com.example.mytestins.R
+import com.example.mytestins.activityes.BaseActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
 

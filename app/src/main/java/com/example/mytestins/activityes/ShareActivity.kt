@@ -1,7 +1,8 @@
-package com.example.mytestins
+package com.example.mytestins.activityes
 
 import android.os.Bundle
 import android.util.Log
+import com.example.mytestins.R
 
 
 class ShareActivity : BaseActivity(2) {

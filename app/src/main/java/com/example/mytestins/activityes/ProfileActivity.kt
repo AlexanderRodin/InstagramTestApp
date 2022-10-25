@@ -1,8 +1,9 @@
-package com.example.mytestins
+package com.example.mytestins.activityes
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import com.example.mytestins.R
 import kotlinx.android.synthetic.main.activity_profile.*
 
 

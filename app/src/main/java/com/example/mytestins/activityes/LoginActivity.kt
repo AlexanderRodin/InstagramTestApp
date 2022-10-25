@@ -1,4 +1,4 @@
-package com.example.mytestins
+package com.example.mytestins.activityes
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.example.mytestins.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -21,25 +22,33 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
         Log.d(TAG, "onCreate")
         mAuth = FirebaseAuth.getInstance()
         login_btn.setOnClickListener(this)
-
+        create_account_text.setOnClickListener { this }
         login_btn.isEnabled = false
         email_input.addTextChangedListener(this)
         password_input.addTextChangedListener(this)
     }
 
     override fun onClick(view: View) {
-        val email = email_input.text.toString()
-        val password = password_input.text.toString()
-        if (validate(email, password)) {
-            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                if (it.isSuccessful) {
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    finish()
+        when (view.id) {
+            R.id.login_btn -> {
+                val email = email_input.text.toString()
+                val password = password_input.text.toString()
+                if (validate(email, password)) {
+                    mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            startActivity(Intent(this, HomeActivity::class.java))
+                            finish()
+                        }
+                    }
+                } else {
+                    showToast("Please enter email and password")
                 }
             }
-        } else {
-            Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
+            R.id.create_account_text -> {
+                startActivity(Intent(this, RegisterActivity::class.java))
+            }
         }
+
     }
 
     private fun validate(email: String, password: String): Boolean {
@@ -53,7 +62,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     }
 
     override fun afterTextChanged(p0: Editable?) {
-        login_btn.isEnabled = email_input.text.isNotEmpty() && password_input.text.isNotEmpty()
+        login_btn.isEnabled =
+            email_input.text.isNotEmpty() &&
+                    password_input.text.isNotEmpty()
 
     }
 }

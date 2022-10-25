@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivity">
+        tools:context=".activityes.LoginActivity">
 
         <ImageView
             android:id="@+id/instagram_img"
@@ -26,7 +26,7 @@
             style="@style/login_input"
             android:layout_marginTop="40dp"
             android:background="@drawable/login_input_bg"
-            android:hint="Email"
+            android:hint="@string/email_input_hint_text"
             android:inputType="textEmailAddress"
             app:layout_constraintTop_toBottomOf="@+id/instagram_img"
             tools:ignore="MissingConstraints" />
@@ -34,7 +34,7 @@
         <EditText
             android:id="@+id/password_input"
             style="@style/login_input"
-            android:hint="Password"
+            android:hint="@string/password_input_hint_text"
             android:inputType="textPassword"
             app:layout_constraintTop_toBottomOf="@+id/email_input"
             tools:ignore="MissingConstraints" />
@@ -43,11 +43,12 @@
             android:id="@+id/login_btn"
             style="@style/login_input"
             android:background="@drawable/login_btn_bg"
-            android:text="Log in"
+            android:text="@string/login_btn_text"
             app:layout_constraintTop_toBottomOf="@+id/password_input"
             tools:ignore="MissingConstraints" />
 
         <TextView
+            android:id="@+id/create_account_text"
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbar_height"
             android:background="@drawable/top_border_gray"

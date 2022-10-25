@@ -10,16 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
         <activity
-            android:name=".LoginActivity"
+            android:name=".activityes.LoginActivity"
             android:exported="false"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".activityes.EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activityes.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,10 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LikesActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".ShareActivity" />
+        <activity android:name=".activityes.LikesActivity" />
+        <activity android:name=".activityes.ProfileActivity" />
+        <activity android:name=".activityes.SearchActivity" />
+        <activity android:name=".activityes.ShareActivity" />
     </application>
 
 </manifest>

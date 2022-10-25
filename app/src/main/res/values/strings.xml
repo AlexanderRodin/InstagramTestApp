@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyTestIns</string>
     <string name="create_account">Don\'t have an account? <b>Sign up</b></string>
+    <string name="password_input_hint_text">Password</string>
+    <string name="email_input_hint_text">Email</string>
+    <string name="login_btn_text">Log in</string>
 </resources>
